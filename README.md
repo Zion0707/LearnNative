@@ -1,6 +1,6 @@
 # myNative
 react-native项目记录
--
+
 
 ### ios启动
 $ react-native run-ios

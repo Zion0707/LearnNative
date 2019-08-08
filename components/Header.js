@@ -13,7 +13,7 @@ export default class Header extends Component{
     //组件被移除的时
 	componentWillUnmount(){
 		console.log('卸载时');
-	}
+    }
     render(){
         return (
             <View style={Styles.headerStyle}>

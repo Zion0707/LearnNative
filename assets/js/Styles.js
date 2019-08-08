@@ -15,6 +15,10 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         lineHeight: Utils.pTd(100),
         fontSize: Utils.pTd(30)
+    },
+    footerStyle:{
+        backgroundColor:'orange',
+        textAlign:'center'
     }
 });
 

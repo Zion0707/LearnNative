@@ -15,9 +15,8 @@ import {
 
 
 import Header from './components/Header';
-
+import Footer from './components/Footer';
 import Styles from './assets/js/Styles';
-console.log(Styles);
 
 var headerProps={
 	title:'首页'
@@ -33,11 +32,7 @@ export default class App extends Component<Props> {
 	}
 	//dom加载完成时
 	componentDidMount(){
-		// setTimeout(()=>{
-		// 	this.setState({
-		// 		text:'World'
-		// 	});
-		// },1000);
+		
 	}
 	//state被更新时
 	shouldComponentUpdate(a,b){
@@ -51,10 +46,12 @@ export default class App extends Component<Props> {
 	}
 	render() {
 		var status = this.state.status ? <Header {...headerProps}/> : null;
+		console.log(this.props);
 		return (
 			<View style={Styles.container}>
 				{status}
 				<Text onPress={this._remove.bind(this)}>{this.state.text}</Text>
+				<Footer />
 			</View>
 		);
 	}

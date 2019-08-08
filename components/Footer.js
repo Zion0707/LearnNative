@@ -12,7 +12,7 @@ export default class Footer extends Component{
     }
     //设置默认props参数
     static defaultProps={
-        text:'f'
+        text:'footer'
     }
     static propTypes={
         text: PropTypes.string

@@ -10,7 +10,8 @@ import React, {Component} from 'react';
 import {
   Text, 
   View,
-  Alert
+  Alert,
+  Image
 } from 'react-native';
 
 
@@ -21,21 +22,15 @@ import Styles from './assets/js/Styles';
 
 type Props = {};
 export default class App extends Component<Props> {
-	// state={
-	// 	status: true,
-	// 	tabList:[
-	// 		{name:'nav1'},
-	// 		{name:'nav2'}
-	// 	]
-	// }
 	constructor(props){
 		super(props);
 		this.state={
 			status: true,
 			tabList:[
-				{name:'nav1'},
-				{name:'nav2'}
-			]
+				{name:'减小'},
+				{name:'加大'}
+			],
+			qiqiuSize:100
 		}
 	}
 	//dom加载完成时
@@ -47,8 +42,16 @@ export default class App extends Component<Props> {
 		console.log(a, b);
 		return true;
 	}
-	_changeTab(a, b){
-		console.log(a, b);
+	_changeTab(idx, item){
+		var calc = 0;
+		if(item.name=='减小'){
+			calc = -20;
+		}else{
+			calc = +20;
+		}
+		this.setState({
+			qiqiuSize: this.state.qiqiuSize + calc
+		});
 	}
 	render() {
 		var headerProps={
@@ -57,6 +60,9 @@ export default class App extends Component<Props> {
 		return (
 			<View style={Styles.container}>
 				<Header {...headerProps}/>
+				<View>
+					<Image style={{width:this.state.qiqiuSize, height:this.state.qiqiuSize}} source={require('./assets/images/qiqiu.jpg')}/>
+				</View>
 					<View>
 					{
 						this.state.tabList.map((item,index)=>{

@@ -18,16 +18,24 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Styles from './assets/js/Styles';
 
-var headerProps={
-	title:'首页'
-}
+
 type Props = {};
 export default class App extends Component<Props> {
+	// state={
+	// 	status: true,
+	// 	tabList:[
+	// 		{name:'nav1'},
+	// 		{name:'nav2'}
+	// 	]
+	// }
 	constructor(props){
 		super(props);
 		this.state={
 			status: true,
-			text:'button'
+			tabList:[
+				{name:'nav1'},
+				{name:'nav2'}
+			]
 		}
 	}
 	//dom加载完成时
@@ -39,18 +47,23 @@ export default class App extends Component<Props> {
 		console.log(a, b);
 		return true;
 	}
-	_remove(){
-		this.setState({
-			status: false
-		});
+	_changeTab(a, b){
+		console.log(a, b);
 	}
 	render() {
-		var status = this.state.status ? <Header {...headerProps}/> : null;
-		console.log(this.props);
+		var headerProps={
+			title:'首页'
+		}
 		return (
 			<View style={Styles.container}>
-				{status}
-				<Text onPress={this._remove.bind(this)}>{this.state.text}</Text>
+				<Header {...headerProps}/>
+					<View>
+					{
+						this.state.tabList.map((item,index)=>{
+							return <Text onPress={this._changeTab.bind(this, index, item)} style={{margin:10}} key={item.name}>{item.name}</Text>
+						})
+					}
+					</View>
 				<Footer />
 			</View>
 		);

@@ -12,8 +12,10 @@ export default class Center extends Component{
                 <Text>Center</Text>
 
                 <Button
-                title="Go to Center... again!"
-                onPress={() => this.props.navigation.push('Center')}
+                    title="Go to Center... again!"
+                    onPress={
+                        () => this.props.navigation.goBack()
+                    }
                 />
             </View>
         )

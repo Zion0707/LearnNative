@@ -7,22 +7,7 @@
  */
 
 import React, {Component} from 'react';
-import {
-  Text, 
-  View,
-  Alert,
-  Image
-} from 'react-native';
-
-import Styles from './assets/js/Styles';
-
-import Home from './page/Home';
-import Center from './page/Center';
-import My from './page/My';
-
-
-
-
+import AppNavigator  from './navigation/AppNavigator';
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -33,10 +18,6 @@ export default class App extends Component<Props> {
 		}
 	}
 	render() {
-		return (
-			<View style={Styles.container}>
-				<Text>test</Text>
-			</View>
-		);
+		return <AppNavigator/>;
 	}
 }

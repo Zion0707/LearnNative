@@ -7,7 +7,9 @@
  */
 
 import React, {Component} from 'react';
-import AppNavigator  from './navigation/AppNavigator';
+
+//导入路由
+import AppNavigator from './navigation/AppNavigator';
 
 type Props = {};
 export default class App extends Component<Props> {

@@ -5,16 +5,22 @@ import My from '../page/My';
 
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
-const AppNavigator = createStackNavigator({
-    Home: {
-        screen: Home
+const AppNavigator = createStackNavigator(
+    {
+        Home: {
+            screen: Home
+        },
+        Center: {
+            screen: Center
+        },
+        My: {
+            screen: My
+        },
     },
-    Center: {
-        screen: Center
-    },
-    My: {
-        screen: My
-    },
-});
+    {
+        //默认页面
+        initialRouteName: 'Home',
+    }
+);
   
 export default createAppContainer(AppNavigator);

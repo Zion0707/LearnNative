@@ -11,12 +11,6 @@ import AppNavigator  from './navigation/AppNavigator';
 
 type Props = {};
 export default class App extends Component<Props> {
-	constructor(props){
-		super(props);
-		this.state={
-			
-		}
-	}
 	render() {
 		return <AppNavigator/>;
 	}

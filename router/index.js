@@ -13,13 +13,13 @@ import {
 //先创建底部导航，然后哪个页面要的话，就把它包含进去
 const bottomTabNavigator = createBottomTabNavigator(
     {
-        首页:{
+        '首页':{
             screen: Home
         },
-        中心:{
+        '中心':{
             screen: Center
         },
-        我的:{
+        '我的':{
             screen: My
         },
     }

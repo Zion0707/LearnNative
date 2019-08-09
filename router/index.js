@@ -24,6 +24,7 @@ const bottomTabNavigator = createBottomTabNavigator(
         },
     }
 );
+
 //所有的页面分布
 const stackNavigator = createStackNavigator(
     {

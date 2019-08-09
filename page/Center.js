@@ -5,16 +5,22 @@ import {
     Button
 } from 'react-native';
 
+import Styles from '../assets/js/Styles';
+
 export default class Center extends Component{
+
+    componentWillUnmount(){
+        console.log('卸载');
+    }
     render(){
         return (
             <View>
                 <Text>Center</Text>
 
                 <Button
-                    title="Go to Center... again!"
+                    title="go my"
                     onPress={
-                        () => this.props.navigation.goBack()
+                        () => this.props.navigation.navigate('My')
                     }
                 />
             </View>

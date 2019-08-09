@@ -12,11 +12,6 @@ export default class My extends Component{
         return (
             <View>
                 <Text>My</Text>
-                <Button onPress={
-                    ()=>{
-                        this.props.navigation.popToTop()
-                    }
-                } title="pop to top"/>
             </View>
         )
     }

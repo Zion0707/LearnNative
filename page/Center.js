@@ -16,13 +16,6 @@ export default class Center extends Component{
         return (
             <View>
                 <Text>Center</Text>
-
-                <Button
-                    title="go my"
-                    onPress={
-                        () => this.props.navigation.navigate('My')
-                    }
-                />
             </View>
         )
     }

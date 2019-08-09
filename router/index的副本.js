@@ -10,29 +10,34 @@ import {
     createBottomTabNavigator 
 } from 'react-navigation';
 
-//先创建底部导航，然后哪个页面要的话，就把它包含进去
-const bottomTabNavigator = createBottomTabNavigator(
+const homePage = createStackNavigator(
     {
         Home:{
             screen: Home
-        },
-        Center:{
-            screen: Center
-        },
-        My:{
-            screen: My
-        },
-    }
-);
-const stackNavigator = createStackNavigator(
-    {
-        Home:{
-            screen: bottomTabNavigator
         },
         Detail:{
             screen: Detail
         }
     }
-)
+);
+
+const bottomTabNavigator = createBottomTabNavigator(
+    {
+        Home: {
+            screen: homePage
+        },
+        Center: {
+            screen: Center
+        },
+        My: {
+            screen: My
+        },
+    },
+    {
+        //默认页面
+        initialRouteName: 'Home',
+    }
+);
+
   
-export default createAppContainer(stackNavigator);
+export default createAppContainer(bottomTabNavigator);

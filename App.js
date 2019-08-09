@@ -10,7 +10,7 @@ import React, {Component} from 'react';
 
 //下面两行是屏蔽警告
 console.disableYellowBox = true;
-console.warn('YellowBox is disabled.');
+console.warn('黄色警告关闭！');
 
 //导入路由
 import AppNavigator from './router/index';

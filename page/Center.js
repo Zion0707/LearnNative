@@ -37,7 +37,6 @@ export default class Center extends Component{
         .catch((err)=>{
             console.error(err);
         })
-
     }
 
     render(){

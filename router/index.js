@@ -22,6 +22,10 @@ const bottomTabNavigator = createBottomTabNavigator(
         '我的':{
             screen: My
         },
+    },
+    {
+        //默认显示页面
+        initialRouteName:'中心'
     }
 );
 
@@ -35,6 +39,6 @@ const stackNavigator = createStackNavigator(
             screen: Detail
         }
     }
-)
+);
   
 export default createAppContainer(stackNavigator);

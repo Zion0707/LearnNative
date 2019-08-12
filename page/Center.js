@@ -25,16 +25,19 @@ export default class Center extends Component{
     componentDidMount(){
         var _self = this;
         //数据请求
-        fetch('https://facebook.github.io/react-native/movies.json')
-        .then((response) => response.json()) //
-        .then((res) => {
+        fetch('https://facebook.github.io/react-native/movies.json',{
+            method:'GET'
+        })
+        .then((res)=>res.json())
+        .then((res)=>{
             _self.setState({
                 jsonData: JSON.stringify(res)
             });
         })
-        .catch((error) => {
-            console.error(error);
-        });
+        .catch((err)=>{
+            console.error(err);
+        })
+
     }
 
     render(){

@@ -30,7 +30,7 @@ export default class Home extends Component{
     }
     //跳转到详情
     _goDetail(item){
-        this.props.navigation.navigate('Detail', item);
+        this.props.navigation.navigate('HomeDetail', item);
     }
     render(){
         const {list} = this.state;

@@ -22,3 +22,6 @@ http://localhost:8081/debugger-ui/
 SDK location not found. Define location with sdk.dir in the local.properties file or with an ANDROID_HOME environment variable.
 ##### 问题1解决方案：
 https://blog.csdn.net/qq_30613075/article/details/78095156
+
+### react-native redux详解及实战
+https://blog.csdn.net/qq_40962320/article/details/85852687

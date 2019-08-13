@@ -3,33 +3,36 @@ import {
     View, 
     Text,
     Button,
-    FlatList,
     ScrollView,
-    ActionSheetIOS,
-    Alert,
-    Platform,
-    Clipboard,
-    TextInput,
-    ToastAndroid,
+    Alert
 } from 'react-native';
 
 import Styles from '../../assets/js/Styles';
 
+//获取redux里面的信息
+import Store from '../../redux/store/index';
+
 export default class My extends Component{
     constructor(props){
         super(props);
+        this.state={
+
+        }
     }
-    async _copy(){
-        Alert.alert('测试222');
+
+    //获取store里面hello属性值
+    _getStoreHello=()=>{
+        Alert.alert( Store.getState().hello );
     }
-    componentDidMount(){
-        console.log('加载');
-    }
+    
     render(){
         return (
             <ScrollView style={Styles.myView}>
-                <TextInput />
-                <Button title="按钮" onPress={this._copy.bind(this)}></Button>
+                <Button title="获取state里面hello的值" onPress={this._getStoreHello.bind(this)}/>
+
+                <Button title="跳转至详情页修改hello的值" onPress={
+                    ()=>{this.props.navigation.navigate('MyDetail')}
+                }/>
             </ScrollView>
         );
     }

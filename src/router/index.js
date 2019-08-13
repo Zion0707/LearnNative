@@ -5,9 +5,10 @@ import {
 } from 'react-navigation';
 
 import Home from '../pages/Home/Index';
-import Detail from '../pages/Home/Detail';
+    import HomeDetail from '../pages/Home/HomeDetail';
 import Center from '../pages/Center/Index';
 import My from '../pages/My/Index';
+    import MyDetail from '../pages/My/MyDetail';
 
 //底部导航
 const bottomTabNavigator = createBottomTabNavigator(
@@ -27,14 +28,17 @@ const bottomTabNavigator = createBottomTabNavigator(
     }
 );
 
-//页面
+//页面显示
 const stackNavigator = createStackNavigator(
     {
         Home:{
             screen: bottomTabNavigator
         },
-        Detail:{
-            screen: Detail
+        HomeDetail:{
+            screen: HomeDetail
+        },
+        MyDetail:{
+            screen: MyDetail
         }
     }
 );

@@ -102,7 +102,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.mynative"
+        applicationId "com.learnnative"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

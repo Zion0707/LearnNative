@@ -20,7 +20,7 @@ export default class My extends Component{
         super(props);
     }
     async _copy(){
-        Alert.alert('测试');
+        Alert.alert('测试222');
     }
     componentDidMount(){
         console.log('加载');

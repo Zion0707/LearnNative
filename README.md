@@ -1,7 +1,7 @@
 # LearnNative
 react-native项目记录
 
-该项目主要创建目的是为了方便直接拿来用，只是搭建了骨架，应用了react-navigation（页面跳转）、redux（状态管理）、fetch(数据请求)基本功能，只要环境没有问题的话，那该项目就能正常运行，在ios和andirod模拟器中。
+该项目创建目的，是为了方便直接拿来用，只是搭建了骨架，应用了react-navigation（页面跳转）、redux（状态管理）、fetch(数据请求)基本功能。只要环境没有问题的话，那该项目就能正常运行在ios和andirod模拟器中。
 
 该react-native版本为 v0.59.2
 

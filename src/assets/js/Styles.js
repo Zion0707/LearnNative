@@ -1,5 +1,8 @@
 //公共样式表
-import { StyleSheet } from 'react-native';
+import { 
+    StyleSheet , 
+    Platform 
+} from 'react-native';
 import { pTd } from './Utils';
 
 const Styles = StyleSheet.create({
@@ -46,6 +49,16 @@ const Styles = StyleSheet.create({
         top:0,
         bottom:0
     },
+    header:{
+        backgroundColor:'orangered',
+        height: Platform.OS === 'ios' ? pTd(170) : pTd(100),
+        paddingTop: Platform.OS === 'ios' ? pTd(60) : 0,
+    },
+    headerText:{
+        color:'#fff',
+        lineHeight: Platform.OS === 'ios' ? pTd(110) : pTd(100),
+        textAlign:'center',
+    }
 });
 
 export default Styles;

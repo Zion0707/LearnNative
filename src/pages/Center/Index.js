@@ -3,14 +3,12 @@ import {
     ScrollView,
     View, 
     Text,
-    Platform,
-    Dimensions,
     TextInput,
-    Alert,
-    Picker
 } from 'react-native';
 
 import Styles from '../../assets/js/Styles';
+
+import Header from '../../components/Header';
 
 export default class Center extends Component{
     constructor(props){
@@ -31,14 +29,8 @@ export default class Center extends Component{
         const {text} = this.state;
         return (
             <View>
-                <Picker
-                    selectedValue={this.state.language}
-                    onValueChange={
-                        (itemValue, itemIndex) => this.setState({language: itemValue})
-                    }>
-                    <Picker.Item label="Java" value="java" />
-                    <Picker.Item label="JavaScript" value="js" />
-                </Picker>
+
+                <Header/>
 
                 <ScrollView style={Styles.scrollBox}>
                     <Text>{this._returnTextMsg(text)}</Text>

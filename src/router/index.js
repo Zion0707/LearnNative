@@ -24,7 +24,7 @@ const bottomTabNavigator = createBottomTabNavigator(
         }
     },
     {
-        initialRouteName: '我的'
+        initialRouteName: '首页'
     }
 );
 
@@ -32,7 +32,11 @@ const bottomTabNavigator = createBottomTabNavigator(
 const stackNavigator = createStackNavigator(
     {
         Home:{
-            screen: bottomTabNavigator
+            screen: bottomTabNavigator,
+            //设置不要头部导航
+            navigationOptions: {
+                header: null
+            }
         },
         HomeDetail:{
             screen: HomeDetail

@@ -7,6 +7,8 @@ import {
 
 import Styles from '../../assets/js/Styles';
 
+import Header from '../../components/Header';
+
 export default class Home extends Component{
     constructor(props){
         super(props);
@@ -36,7 +38,9 @@ export default class Home extends Component{
         const {list} = this.state;
         return (
             <View>
-                <Text>Home</Text>
+
+                <Header title="首页"/>
+                
                 <View style={Styles.listWrap}>
                 {
                     list.map((item,index)=>{

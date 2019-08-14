@@ -5,6 +5,10 @@ react-native项目记录
 
 该react-native版本为 v0.59.2
 
+
+### 预览视频
+![](./preview/preview.mp4)
+
 ### 主要代码文件都放在src文件夹里面
 
 ### ios启动

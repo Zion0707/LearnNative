@@ -1,4 +1,4 @@
-# myNative
+# LearnNative
 react-native项目记录
 
 ### 主要代码文件都放在src文件夹里面

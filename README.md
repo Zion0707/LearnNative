@@ -7,7 +7,7 @@ react-native项目记录
 
 
 ### 预览视频
-![](./preview/preview.mp4)
+存储在根目录的 preview 文件夹中
 
 ### 主要代码文件都放在src文件夹里面
 
